@@ -2,3 +2,6 @@ docker_dependencies:
   - apt-transport-https
   - ca-certificates
   - gnupg2
+
+docker_keyserver: ha.pool.sks-keyservers.net
+docker_key_id: 58118E89F3A912897C070ADBF76221572C52609D
