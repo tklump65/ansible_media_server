@@ -1,14 +1,11 @@
 ---
 - name: create required directories for sabnzbd
-  file:
-    path: "{{ item }}"
-    state: directory
-    mode: 755
-    with_items:
-      - /opt/appdata/sabnzbd/config
-      - /mnt/storage/download/complete
-      - /mnt/storage/download/incomplete
-  
+  file: path="{{ item }}" state=directory mode=755
+  with_items:
+    - /opt/appdata/sabnzbd/config
+    - /mnt/storage/download/complete
+    - /mnt/storage/download/incomplete
+
 - name: create sabnzbd docker container
   docker:
     name: sabnzbd
