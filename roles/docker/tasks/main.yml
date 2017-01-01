@@ -5,5 +5,5 @@
 
 - name: install docker gpg key for apt
   apt_key:
-    keyserver: docker_keyserver
-    id: docker_key_id
+    keyserver: "{{ docker_keyserver }}"
+    id: "{{ docker_key_id }}"
