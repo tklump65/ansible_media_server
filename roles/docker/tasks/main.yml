@@ -4,5 +4,8 @@
     name: "{{ item }}"
     status: present
     update_cache: yes
-    with_items: "{{ docker_dependencies }}"
-    
+    #with_items: "{{ docker_dependencies }}"
+    with_items: 
+      - apt-transport-https
+      - ca-certificates
+      - gnupg2
