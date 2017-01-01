@@ -1,10 +1,6 @@
 ---
 - name: install docker dependency packages
-  apt:
-    name: "{{ item }}"
-    status: present
-    update_cache: yes
-    #with_items: "{{ docker_dependencies }}"
+  apt: name="{{ item }}" state=present
     with_items: 
       - apt-transport-https
       - ca-certificates
