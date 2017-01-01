@@ -7,3 +7,7 @@
   apt_key:
     keyserver: "{{ docker_keyserver }}"
     id: "{{ docker_key_id }}"
+
+- name: install docker repository
+  repo: "{{ docker_repo }}"
+  state: present
