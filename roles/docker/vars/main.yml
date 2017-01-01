@@ -1,0 +1,5 @@
+---
+docker_dependencies:
+  - apt-transport-https
+  - ca-certificates
+  - gnupg2
