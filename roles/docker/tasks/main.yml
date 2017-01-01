@@ -12,3 +12,15 @@
   apt_repository:
     repo: "{{ docker_repo }}"
     state: present
+    update_cache: yes
+
+- name: install docker package
+  apt:
+    name: "docker-engine"
+    state: present
+    update_cache: yes
+
+- name: start docker
+  service:
+    name: docker
+    state: started
