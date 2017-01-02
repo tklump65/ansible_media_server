@@ -26,14 +26,9 @@
     name: sabnzbd
     image: linuxserver/sabnzbd
     state: running
-    #restart_policy: always
     ports:
     - 8080:8080
     volumes:
     - /opt/appdata/sabnzbd/config:/config
     - /mnt/storage/download/complete:/download/complete
     - /mnt/storage/download/incomplete:/download/incomplete
-    env:
-    - PGID: 0
-    - PUID: 0
-    - TZ: America/Los_Angeles
