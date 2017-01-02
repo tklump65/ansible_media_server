@@ -6,6 +6,10 @@
     - /mnt/storage/download/complete
     - /mnt/storage/download/incomplete
 
+- name: install pip
+  easy_install:
+    name: pip
+    
 - name: install docker-py via pip
   pip:
     name: docker-py
