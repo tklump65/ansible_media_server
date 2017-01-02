@@ -6,6 +6,12 @@
     - /mnt/storage/download/complete
     - /mnt/storage/download/incomplete
 
+- name: install python-setuptools
+  apt:
+    name: python-setuptools
+    state: present
+    update_cache: yes
+    
 - name: install pip
   easy_install:
     name: pip
