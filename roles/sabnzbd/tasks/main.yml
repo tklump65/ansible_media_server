@@ -6,6 +6,11 @@
     - /mnt/storage/download/complete
     - /mnt/storage/download/incomplete
 
+- name: install docker-py via pip
+  pip:
+    name: docker-py
+    state: present
+
 - name: create sabnzbd docker container
   docker:
     name: sabnzbd
