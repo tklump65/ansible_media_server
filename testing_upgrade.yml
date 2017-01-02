@@ -1,0 +1,10 @@
+---
+- name: copy new sources.list for testing distro repo
+  copy:
+    src: etc/apt/sources.list
+    dest: /etc/apt/sources.list
+    
+- name: run dist-upgrade
+  apt:
+    update_cache: yes
+    upgrade: dist
