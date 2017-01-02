@@ -4,11 +4,11 @@
     src: etc/apt/sources.list
     dest: /etc/apt/sources.list
     
-# - name: ensure os is up to date
-  # apt:
-    # update_cache: yes
-    # upgrade: dist
-    # cache_valid_time: 300
+- name: ensure os is up to date
+  apt:
+    update_cache: yes
+    upgrade: dist
+    cache_valid_time: 300
     
 # - name: install packages
   # apt: pkg={{ item }} state=present
