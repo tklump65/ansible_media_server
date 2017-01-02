@@ -26,6 +26,7 @@
     name: sabnzbd
     image: linuxserver/sabnzbd
     state: running
+    memory_limit: "512MB"
     ports:
     - 8080:8080
     volumes:
